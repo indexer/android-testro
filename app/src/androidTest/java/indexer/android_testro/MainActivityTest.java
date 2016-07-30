@@ -23,9 +23,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
     onView(withText("Hello World")).check(ViewAssertions.matches(isDisplayed()));
   }
 
-  @Test public void buttonClcikAndNotification(){
-    onView(withId(R.id.btn_toast)).perform(click());
+  @Test public void buttonClickAndNotification() {
+    onView(withId(R.id.btn_toast)).perform(click()).check(ViewAssertions.matches(isDisplayed()));
   }
-
-
 }
