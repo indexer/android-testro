@@ -7,7 +7,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 /**
@@ -20,4 +22,10 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
   @Test public void shouldMainScreenText() {
     onView(withText("Hello World")).check(ViewAssertions.matches(isDisplayed()));
   }
+
+  @Test public void buttonClcikAndNotification(){
+    onView(withId(R.id.btn_toast)).perform(click());
+  }
+
+
 }
